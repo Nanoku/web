@@ -4,12 +4,14 @@ from wsgiref.simple_server import make_server
 from cgi import parse_qs, escape
 
 def wsgi_application(environ, start_response):   
-    body = b""
+    body = []
     d = parse_qs(environ['QUERY_STRING'])
-    body = [bytes(str(i) + '=' + str(d[i]) + '\n', 'ascii') for i in d]
+    for i in d:
+    	for it in d[i]:
+            body.append(bytes(str(i) + '=' + str(it), 'ascii'))
     start_response("200 OK", [
             ("Content-Type", "text/plain"),
             ("Content-Length", str(len(body)))
         ])
     print()
-    return body
+    return [body]
