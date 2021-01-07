@@ -1,0 +1,21 @@
+[2021-01-07 21:34:22 +0000] [139] [INFO] Starting gunicorn 19.6.0
+[2021-01-07 21:34:22 +0000] [139] [INFO] Listening at: http://127.0.0.1:8000 (139)
+[2021-01-07 21:34:22 +0000] [139] [INFO] Using worker: sync
+[2021-01-07 21:34:22 +0000] [142] [INFO] Booting worker with pid: 142
+[2021-01-07 21:34:38 +0000] [139] [INFO] Handling signal: int
+[2021-01-07 21:34:38 +0000] [142] [INFO] Worker exiting (pid: 142)
+[2021-01-07 21:34:38 +0000] [139] [INFO] Shutting down: Master
+[2021-01-07 21:43:34 +0000] [249] [INFO] Starting gunicorn 19.6.0
+[2021-01-07 21:43:34 +0000] [249] [INFO] Listening at: http://127.0.0.1:8000 (249)
+[2021-01-07 21:43:34 +0000] [249] [INFO] Using worker: sync
+[2021-01-07 21:43:34 +0000] [252] [INFO] Booting worker with pid: 252
+[2021-01-07 21:44:06 +0000] [249] [INFO] Handling signal: int
+[2021-01-07 21:44:06 +0000] [252] [INFO] Worker exiting (pid: 252)
+[2021-01-07 21:44:06 +0000] [249] [INFO] Shutting down: Master
+[2021-01-07 21:46:59 +0000] [319] [INFO] Starting gunicorn 19.6.0
+[2021-01-07 21:46:59 +0000] [319] [INFO] Listening at: http://127.0.0.1:8000 (319)
+[2021-01-07 21:46:59 +0000] [319] [INFO] Using worker: sync
+[2021-01-07 21:46:59 +0000] [322] [INFO] Booting worker with pid: 322
+[2021-01-07 21:47:18 +0000] [319] [INFO] Handling signal: int
+[2021-01-07 21:47:19 +0000] [322] [INFO] Worker exiting (pid: 322)
+[2021-01-07 21:47:19 +0000] [319] [INFO] Shutting down: Master
