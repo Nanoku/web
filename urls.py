@@ -1,41 +1,28 @@
-"""CRT6_app URL Configuration
+"""ask URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+    https://docs.djangoproject.com/en/1.10/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  re_path('', views.home, name='home')
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
 Class-based views
     1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  re_path('', Home.as_view(), name='home')
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
 Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  re_path('blog/', include('blog.urls'))
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.urls import path
-from django.conf.urls import (handler400, handler403, handler404, handler500)
-from qa.views import *
-#from django.http import *
+from django.conf.urls import url
 #from django.contrib import admin
-
-#handler404 = handler404
+from qa.views import *
 
 urlpatterns = [
-    re_path(r'^$', test, name='home'), #r'^$'
-    re_path(r'^login/.*$', test, name='login'),
-    re_path(r'^signup/.*$', test, name='signup'),
-    re_path(r'^question/(?P<q_id>\w+)/$',  test, name='question'),
-    re_path(r'^ask/.*$', test, name='ask'),
-    re_path(r'^popular/.*$', test, name='popular'),
-    re_path(r'^new/.*$', test, name='new'),
+   url(r'^$', test),
+   url(r'^login/.*$', test, name='login'),
+   url(r'^signup/.*', test, name='signup'),
+   url(r'^question/(?P<id>[0-9]+)/$', test, name='question'),
+   url(r'^ask/.*', test, name='ask'),
+   url(r'^popular/.*', test, name='popular'),
+   url(r'^new/.*', test, name='new'),
 ]
-"""
-    re_path(r'^$', 'qa.views.test'),
-    re_path(r'^login/.*$', 'qa.views.test'),
-    re_path(r'^signup/.*$', 'qa.views.test'),
-    re_path(r'^question/\d+/$', 'qa.views.test'),
-    re_path(r'^ask/.*$', 'qa.views.test'),
-    re_path(r'^popular/.*$', 'qa.views.test'),
-    re_path(r'^new/.*$', 'qa.views.test')
-"""
