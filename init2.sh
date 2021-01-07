@@ -1,4 +1,8 @@
 #!/bin/sh
+#pip3 install virtualenv
+#virtualenv mystepik
+#source mystepik/bin/activate
+#python3 -m pip3 install --upgrade pip setuptools 
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo service nginx restart
