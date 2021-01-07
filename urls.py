@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.urls import path, re_path
 from django.conf.urls import (handler400, handler403, handler404, handler500)
 from qa.views import *
 #from django.http import *
@@ -21,12 +21,12 @@ from qa.views import *
 
 #handler404 = handler404
 
-urlpatterns = [
-    path('', test, name='home'), #r'^$'
-    path('login/', test, name='login'),
-    path('signup/', test, name='signup'),
-    path('question/<int:q_id>/',  test, name='question'),
-    path('ask/', test, name='ask'),
-    path('popular/', test, name='popular'),
-    path('new/', test, name='new'),
+urlpatterns = [  
+    re_path(r'^$', 'qa.views.test'),
+    re_path(r'^login/.*$', 'qa.views.test'),
+    re_path(r'^signup/.*$', 'qa.views.test'),
+    re_path(r'^question/\d+/$', 'qa.views.test'),
+    re_path(r'^ask/.*$', 'qa.views.test'),
+    re_path(r'^popular/.*$', 'qa.views.test'),
+    re_path(r'^new/.*$', 'qa.views.test')
 ]
