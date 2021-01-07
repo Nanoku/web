@@ -1,0 +1,31 @@
+[2021-01-07 21:20:52 +0000] [524] [INFO] Starting gunicorn 19.6.0
+[2021-01-07 21:20:52 +0000] [524] [INFO] Listening at: http://127.0.0.1:8000 (524)
+[2021-01-07 21:20:52 +0000] [524] [INFO] Using worker: sync
+[2021-01-07 21:20:52 +0000] [527] [INFO] Booting worker with pid: 527
+[2021-01-07 21:20:52 +0000] [527] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/arbiter.py", line 557, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/workers/base.py", line 136, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python3.4/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/home/box/web/ask/ask/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+  File "/usr/local/lib/python3.4/dist-packages/django/core/wsgi.py", line 2, in <module>
+    from django.core.handlers.wsgi import WSGIHandler
+  File "/usr/local/lib/python3.4/dist-packages/django/core/handlers/wsgi.py", line 139
+    *response.items(),
+               ^
+SyntaxError: can use starred expression only as assignment target
+[2021-01-07 21:20:52 +0000] [527] [INFO] Worker exiting (pid: 527)
+[2021-01-07 21:20:53 +0000] [524] [INFO] Shutting down: Master
+[2021-01-07 21:20:53 +0000] [524] [INFO] Reason: Worker failed to boot.
