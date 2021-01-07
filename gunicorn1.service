@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn1 daemon
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/home/box/web
+ExecStart=/home/box/web/gunicorn -w 100 -b 0.0.0.0:8080 hello:wsgi_application
+
+[Install]
+WantedBy=multi-user.target

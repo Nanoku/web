@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from django.conf.urls import (handler400, handler403, handler404, handler500)
-from mainapp.views import *
+from qa.views import *
 #from django.http import *
 #from django.contrib import admin
 
@@ -23,11 +23,10 @@ from mainapp.views import *
 
 urlpatterns = [
     path('', test, name='home'), #r'^$'
-    path('login/', test, name='home'),
-    path('signup/', test, name='home'),
-    path('question/<int:q_id>/',  test, name='home'),
-    path('ask/', test, name='home'),
-    path('popular/', test, name='home'),
-    path('new/', test, name='home'),
-    path('new/', test, name='home'),
+    path('login/', test, name='login'),
+    path('signup/', test, name='signup'),
+    path('question/<int:q_id>/',  test, name='question'),
+    path('ask/', test, name='ask'),
+    path('popular/', test, name='popular'),
+    path('new/', test, name='new'),
 ]
