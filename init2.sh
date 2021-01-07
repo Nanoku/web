@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo rm -rf /etc/nginx/sites-enabled/default
-sudo nginx -c /etc/nginx/sites-enabled/test.conf
+sudo service nginx restart
 git config --global user.name "Nanoku"
 git config --global user.email "nanokuvalda@gmail.com"
 django-admin startproject ask
